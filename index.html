@@ -329,10 +329,7 @@ nav{
 ═══════════════════════════════════════ */
 .bags-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .custom-accessories-section{margin-top:60px;width:100%;box-sizing:border-box}
-.custom-accessories-section .jewelry-sub-head{position:relative;left:50%;width:100vw;margin-left:0;transform:translateX(-50%);text-align:center}
-.custom-accessories-section .jewelry-sub-head h3,
-.custom-accessories-section .jewelry-sub-head p,
-.custom-accessories-section .jewelry-sub-head .sub-rule{margin-left:auto!important;margin-right:auto!important;text-align:center}
+.custom-accessories-section .jewelry-sub-head{text-align:center}
 .custom-accessories-grid{display:grid;grid-template-columns:repeat(3,minmax(360px,1fr));gap:24px;margin-top:20px}
 .custom-accessories-grid .bag-info{text-align:center}
 .custom-accessories-grid .qty-select{justify-content:center}
@@ -498,7 +495,6 @@ footer{background:var(--olive-bg);padding:64px 60px 32px}
   .bags-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .custom-accessories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .custom-accessories-section{padding:0;width:100%;margin-left:0;transform:none}
-  .custom-accessories-section .jewelry-sub-head{left:auto;width:100%;margin-left:0;transform:none}
   .about-section{grid-template-columns:1fr;padding:60px 32px;gap:40px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
   .contact-strip{flex-direction:column;align-items:flex-start}
@@ -1474,6 +1470,7 @@ footer{background:var(--olive-bg);padding:64px 60px 32px}
         <button class="add-to-bag" onclick="addToBag('Peach Picnic Tote', '45.00', document.getElementById('qty_tote_peach_picnic').value)">Add to Bag</button>
       </div>
     </div>
+  </div>
 
   <!-- CUSTOM ACCESSORIES SUBSECTION -->
   <div class="jewelry-subsection custom-accessories-section" id="custom-accessories">
@@ -1603,8 +1600,6 @@ footer{background:var(--olive-bg);padding:64px 60px 32px}
         </div>
       </div>
     </div>
-  </div>
-
   </div>
 </section>
 
