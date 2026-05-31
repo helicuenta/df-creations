@@ -526,60 +526,61 @@ footer{background:var(--olive-bg);padding:64px 60px 32px}
   display:flex;align-items:center;justify-content:center;
   font-family:'Lato',sans-serif;
 }
+/* CART DRAWER */
 .cart-drawer{
-  position:fixed;top:0;right:-420px;width:400px;height:100vh;
-  background:var(--offwhite);z-index:1000;
-  box-shadow:-4px 0 24px rgba(0,0,0,.15);
+  position:fixed;right:-460px;top:0;width:460px;max-width:100vw;
+  height:100vh;background:#f4ede0;
+  z-index:1000;transition:right .35s ease;
   display:flex;flex-direction:column;
-  transition:right .3s ease;overflow:hidden;
+  box-shadow:-4px 0 32px rgba(0,0,0,.15);
 }
 .cart-drawer.open{right:0}
 .cart-header{
-  padding:24px 28px;border-bottom:1px solid var(--beige3);
+  padding:20px 24px;
+  border-bottom:1px solid #e0d4be;
   display:flex;align-items:center;justify-content:space-between;
+  background:#f4ede0;
 }
-.cart-header h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--black)}
-.cart-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--brown);padding:4px}
-.cart-items{flex:1;overflow-y:auto;padding:20px 28px}
-.cart-empty{text-align:center;padding:60px 20px;color:var(--gold);font-size:13px;letter-spacing:1px}
-.cart-item{
-  display:flex;align-items:center;gap:14px;
-  padding:14px 0;border-bottom:1px solid var(--beige3);
-}
+.cart-header h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#6b4c35;display:flex;align-items:center;gap:8px;}
+.cart-close{background:none;border:none;font-size:22px;cursor:pointer;color:#3a3628;padding:4px;line-height:1;}
+.cart-items{flex:1;overflow-y:auto;padding:16px 24px;}
+.cart-empty{text-align:center;padding:60px 20px;color:#9a8050;font-size:13px;letter-spacing:1px;}
+.cart-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #e0d4be;}
 .cart-item-info{flex:1}
-.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--black);margin-bottom:4px}
-.cart-item-price{font-size:12px;color:var(--gold);letter-spacing:1px}
-.cart-item-qty{display:flex;align-items:center;gap:8px}
-.qty-btn{
-  width:26px;height:26px;border:1px solid var(--beige3);
-  background:var(--cream);cursor:pointer;font-size:14px;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--brown);transition:background .2s;
-}
-.qty-btn:hover{background:var(--beige2)}
-.qty-num{font-size:13px;color:var(--black);min-width:20px;text-align:center}
-.remove-item{background:none;border:none;color:rgba(0,0,0,.2);cursor:pointer;font-size:16px;padding:4px;transition:color .2s}
-.remove-item:hover{color:var(--brown)}
-.cart-footer{padding:20px 28px;border-top:1px solid var(--beige3);background:var(--cream)}
-.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.cart-total span{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--black)}
-.cart-total strong{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--olive)}
-.checkout-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;text-align:center}
-.checkout-btns{display:flex;flex-direction:column;gap:8px}
-.checkout-btn{
-  display:block;text-align:center;padding:12px;
-  font-size:11px;letter-spacing:2px;text-transform:uppercase;
-  text-decoration:none;border:1px solid var(--beige3);
-  color:var(--darkgray);font-family:'Lato',sans-serif;
-  transition:all .2s;cursor:pointer;background:var(--offwhite);
-}
-.checkout-btn:hover{background:var(--olive);color:var(--offwhite);border-color:var(--olive)}
-.checkout-btn.primary{background:var(--olive);color:var(--offwhite);border-color:var(--olive)}
-.checkout-btn.primary:hover{background:var(--olive-bg)}
-.cart-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,.3);
-  z-index:999;display:none;
-}
+.cart-item-name{font-size:14px;color:#1a1810;margin-bottom:2px;}
+.cart-item-price{font-size:13px;color:#5c6a35;font-weight:400;}
+.cart-item-qty{display:flex;align-items:center;gap:6px;}
+.qty-btn{width:24px;height:24px;border:1px solid #e0d4be;background:#faf7f2;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;color:#6b4c35;transition:background .2s;}
+.qty-btn:hover{background:#ece3d0}
+.qty-num{font-size:13px;min-width:20px;text-align:center;}
+.remove-item{background:none;border:none;color:rgba(0,0,0,.25);cursor:pointer;font-size:18px;padding:2px;transition:color .2s;line-height:1;}
+.remove-item:hover{color:#6b4c35}
+.order-summary{padding:12px 24px;background:#f4ede0;border-top:1px solid #e0d4be;}
+.summary-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:13px;color:#3a3628;}
+.summary-row.total{border-top:1px solid #e0d4be;margin-top:6px;padding-top:10px;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#1a1810;}
+.summary-row.total span:last-child{color:#5c6a35;}
+.summary-tbd{color:#9a8050;font-size:11px;letter-spacing:1px;}
+.cart-footer{padding:14px 24px 20px;background:#f4ede0;}
+.order-note{font-size:11px;color:#3a3628;text-align:center;line-height:1.6;margin-bottom:14px;padding:10px;background:#faf7f2;border:1px solid #e0d4be;}
+.social-checkout-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
+.soc-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:'Lato',sans-serif;font-weight:400;transition:opacity .2s;border-radius:2px;}
+.soc-btn:hover{opacity:.88}
+.soc-btn.text-msg{background:#34c759;color:#fff;}
+.soc-btn.whatsapp{background:#25d366;color:#fff;}
+.soc-btn.email{background:#c0392b;color:#fff;}
+.soc-btn.instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;}
+.soc-btn.facebook{background:#1877f2;color:#fff;}
+.soc-btn.tiktok{background:#010101;color:#fff;}
+.soc-btn.pinterest{background:#e60023;color:#fff;grid-column:1/-1;}
+.payment-divider{text-align:center;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#9a8050;margin:10px 0;}
+.payment-row{display:flex;gap:8px;}
+.pay-checkout-btn{flex:1;padding:11px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;text-align:center;border:1px solid #e0d4be;background:#faf7f2;color:#1a1810;font-family:'Lato',sans-serif;transition:all .2s;}
+.pay-checkout-btn:hover{background:#5c6a35;color:#fff;border-color:#5c6a35;}
+.pay-checkout-btn.pp{background:#5c6a35;color:#fff;border-color:#5c6a35;}
+.pay-checkout-btn.pp:hover{background:#4a5c2a;}
+.clear-btn{width:100%;margin-top:8px;padding:10px;background:transparent;color:#3a3628;border:1px solid #e0d4be;cursor:pointer;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-family:'Lato',sans-serif;transition:all .2s;}
+.clear-btn:hover{border-color:#6b4c35;color:#6b4c35;}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:999;display:none;}
 .cart-overlay.show{display:block}
 /* Add to bag button */
 .add-to-bag{
@@ -1727,99 +1728,128 @@ footer{background:var(--olive-bg);padding:64px 60px 32px}
 <!-- CART DRAWER -->
 <div class="cart-drawer" id="cartDrawer">
   <div class="cart-header">
-    <h3>Your Bag</h3>
-    <button class="cart-close" onclick="closeCart()">✕</button>
+    <h3>🛒 Your Order</h3>
+    <button class="cart-close" onclick="closeCart()">×</button>
   </div>
   <div class="cart-items" id="cartItems">
-    <div class="cart-empty">Your bag is empty 🌿<br><br>Add some beautiful pieces!</div>
+    <p class="cart-empty">Your bag is empty</p>
   </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Total</span>
-      <strong id="cartTotal">$0.00</strong>
+  <div class="order-summary" id="orderSummary" style="display:none;">
+    <div class="summary-row"><span>Subtotal</span><span id="subtotalAmt">$0.00</span></div>
+    <div class="summary-row"><span>Shipping</span><span class="summary-tbd">TBD</span></div>
+    <div class="summary-row"><span>Tax (9%)</span><span id="taxAmt">$0.00</span></div>
+    <div class="summary-row total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="order-note">Please review your order. You may complete your payment now or send us your order details and we'll confirm availability and finalize everything with you.</div>
+    <div class="social-checkout-grid">
+      <a class="soc-btn text-msg" href="sms:?body=" id="textBtn">📱 Text Message</a>
+      <a class="soc-btn whatsapp" href="https://wa.me/?text=" id="whatsappBtn" target="_blank">💬 WhatsApp</a>
+      <a class="soc-btn email" href="mailto:damarisfinlin@gmail.com?subject=Order&body=" id="emailBtn">✉️ Email</a>
+      <a class="soc-btn instagram" href="https://www.instagram.com/direct/new/" target="_blank">📸 Instagram DM</a>
+      <a class="soc-btn facebook" href="https://www.facebook.com/profile.php?id=100089187796792" target="_blank">👍 Facebook</a>
+      <a class="soc-btn tiktok" href="https://www.tiktok.com/@dfcreationshop" target="_blank">🎵 TikTok</a>
+      <a class="soc-btn pinterest" href="https://www.pinterest.com/dfcreationshop" target="_blank">📌 Pinterest</a>
     </div>
-    <p class="checkout-label">Choose payment method</p>
-    <div class="checkout-btns">
-      <a class="checkout-btn primary" id="paypalBtn" href="https://paypal.me/Dfcreationshop" target="_blank">💙 Pay with PayPal</a>
-      <a class="checkout-btn" id="venmoBtn" href="https://venmo.com/code?user_id=4184850575656956754&created=1731952471" target="_blank">💜 Pay with Venmo</a>
-      <a class="checkout-btn" id="cashappBtn" href="https://cash.app/$DamarisFinlin" target="_blank">💚 Pay with CashApp</a>
+    <div class="payment-divider">Pay Now</div>
+    <div class="payment-row">
+      <a class="pay-checkout-btn pp" id="paypalBtn" href="https://paypal.me/Dfcreationshop" target="_blank">💙 PayPal</a>
+      <a class="pay-checkout-btn" id="venmoBtn" href="https://venmo.com/code?user_id=4184850575656956754&created=1731952471" target="_blank">💜 Venmo</a>
+      <a class="pay-checkout-btn" id="cashappBtn" href="https://cash.app/$DamarisFinlin" target="_blank">💚 Cash App</a>
     </div>
-    <p style="font-size:10px;color:var(--gold);text-align:center;margin-top:12px;letter-spacing:.5px;">After payment, message us on Instagram or email damarisfinlin@gmail.com with your order details.</p>
+    <button class="clear-btn" onclick="clearCart()">Clear Order</button>
   </div>
 </div>
 
 <!-- CART JAVASCRIPT -->
 <script>
 let cart = [];
+const TAX_RATE = 0.09;
 
 function toggleCart(){
-  const drawer = document.getElementById('cartDrawer');
-  const overlay = document.getElementById('cartOverlay');
-  drawer.classList.toggle('open');
-  overlay.classList.toggle('show');
+  document.getElementById('cartDrawer').classList.toggle('open');
+  document.getElementById('cartOverlay').classList.toggle('show');
 }
 function closeCart(){
   document.getElementById('cartDrawer').classList.remove('open');
   document.getElementById('cartOverlay').classList.remove('show');
 }
-
 function addToBag(name, price, qty){
-  qty = parseInt(qty) || 1;
-  const existing = cart.find(i => i.name === name);
-  if(existing){
-    existing.qty += qty;
-  } else {
-    cart.push({name, price: parseFloat(price), qty});
-  }
+  qty = parseInt(qty)||1;
+  const existing = cart.find(i=>i.name===name);
+  if(existing){ existing.qty+=qty; }
+  else{ cart.push({name, price:parseFloat(price), qty}); }
   updateCart();
-  // Open cart drawer
   document.getElementById('cartDrawer').classList.add('open');
   document.getElementById('cartOverlay').classList.add('show');
 }
-
 function updateQty(name, delta){
-  const item = cart.find(i => i.name === name);
+  const item = cart.find(i=>i.name===name);
   if(item){
-    item.qty += delta;
-    if(item.qty <= 0) cart = cart.filter(i => i.name !== name);
+    item.qty+=delta;
+    if(item.qty<=0) cart=cart.filter(i=>i.name!==name);
   }
   updateCart();
 }
-
 function removeItem(name){
-  cart = cart.filter(i => i.name !== name);
+  cart=cart.filter(i=>i.name!==name);
   updateCart();
 }
-
+function clearCart(){
+  cart=[];
+  updateCart();
+}
 function updateCart(){
-  const total = cart.reduce((s,i) => s + i.price * i.qty, 0);
-  const count = cart.reduce((s,i) => s + i.qty, 0);
-  document.getElementById('cartCount').textContent = count;
-  document.getElementById('cartTotal').textContent = '$' + total.toFixed(2);
+  const container=document.getElementById('cartItems');
+  const countEl=document.getElementById('cartCount');
+  const subtotalEl=document.getElementById('subtotalAmt');
+  const taxEl=document.getElementById('taxAmt');
+  const totalEl=document.getElementById('cartTotal');
+  const summaryEl=document.getElementById('orderSummary');
+  const footerEl=document.getElementById('cartFooter');
 
-  // Update payment links with amount note
-  const note = encodeURIComponent('DF Creations order - $' + total.toFixed(2));
-  document.getElementById('paypalBtn').href = 'https://paypal.me/Dfcreationshop/' + total.toFixed(2);
-  document.getElementById('venmoBtn').href = 'https://venmo.com/code?user_id=4184850575656956754&created=1731952471';
-  document.getElementById('cashappBtn').href = 'https://cash.app/$DamarisFinlin/' + total.toFixed(2);
+  const subtotal=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const tax=subtotal*TAX_RATE;
+  const total=subtotal+tax;
+  const count=cart.reduce((s,i)=>s+i.qty,0);
 
-  const container = document.getElementById('cartItems');
-  if(cart.length === 0){
-    container.innerHTML = '<div class="cart-empty">Your bag is empty 🌿<br><br>Add some beautiful pieces!</div>';
+  if(countEl) countEl.textContent=count;
+  if(subtotalEl) subtotalEl.textContent='$'+subtotal.toFixed(2);
+  if(taxEl) taxEl.textContent='$'+tax.toFixed(2);
+  if(totalEl) totalEl.textContent='$'+total.toFixed(2);
+  if(summaryEl) summaryEl.style.display=cart.length?'block':'none';
+  if(footerEl) footerEl.style.display=cart.length?'block':'none';
+
+  const orderMsg=cart.map(i=>`${i.qty}x ${i.name} - $${(i.price*i.qty).toFixed(2)}`).join('\n')
+    +`\n\nSubtotal: $${subtotal.toFixed(2)}\nTax (9%): $${tax.toFixed(2)}\nTotal: $${total.toFixed(2)}`;
+  const encodedMsg=encodeURIComponent('Order from DF Creations:\n\n'+orderMsg);
+
+  const textBtn=document.getElementById('textBtn');
+  const whatsappBtn=document.getElementById('whatsappBtn');
+  const emailBtn=document.getElementById('emailBtn');
+  if(textBtn) textBtn.href='sms:?body='+encodedMsg;
+  if(whatsappBtn) whatsappBtn.href='https://wa.me/?text='+encodedMsg;
+  if(emailBtn) emailBtn.href='mailto:damarisfinlin@gmail.com?subject=Order%20from%20DF%20Creations&body='+encodedMsg;
+
+  const paypalBtn=document.getElementById('paypalBtn');
+  if(paypalBtn) paypalBtn.href='https://paypal.me/Dfcreationshop/'+total.toFixed(2);
+
+  if(cart.length===0){
+    container.innerHTML='<p class="cart-empty">Your bag is empty</p>';
     return;
   }
-  container.innerHTML = cart.map(item => `
+  container.innerHTML=cart.map(item=>`
     <div class="cart-item">
       <div class="cart-item-info">
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-price">$${item.price.toFixed(2)} each</div>
+        <div class="cart-item-name">${item.qty}x ${item.name}</div>
+        <div class="cart-item-price">$${(item.price*item.qty).toFixed(2)}</div>
       </div>
       <div class="cart-item-qty">
-        <button class="qty-btn" onclick="updateQty('${item.name.replace(/'/g,"\'")}', -1)">−</button>
+        <button class="qty-btn" onclick="updateQty('${item.name}',-1)">-</button>
         <span class="qty-num">${item.qty}</span>
-        <button class="qty-btn" onclick="updateQty('${item.name.replace(/'/g,"\'")}', 1)">+</button>
+        <button class="qty-btn" onclick="updateQty('${item.name}',1)">+</button>
       </div>
-      <button class="remove-item" onclick="removeItem('${item.name.replace(/'/g,"\'")}')">✕</button>
+      <button class="remove-item" onclick="removeItem('${item.name}')">x</button>
     </div>
   `).join('');
 }
